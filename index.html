@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Panda3d : The Panda3D free open-source cross-platform game engine">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Panda3d</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kbtomo/panda3d">View on GitHub</a>
+
+          <h1 id="project_title">Panda3d</h1>
+          <h2 id="project_tagline">The Panda3D free open-source cross-platform game engine</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/kbtomo/panda3d/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/kbtomo/panda3d/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><a href="https://travis-ci.org/panda3d/panda3d"><img src="https://travis-ci.org/panda3d/panda3d.svg?branch=master" alt="Build Status"></a></p>
+
+<p><img src="https://avatars2.githubusercontent.com/u/590956?v=3&amp;s=200" align="right"></p>
+
+<h1>
+<a id="panda3d" class="anchor" href="#panda3d" aria-hidden="true"><span class="octicon octicon-link"></span></a>Panda3D</h1>
+
+<p>Panda3D is a game engine, a framework for 3D rendering and game development for
+Python and C++ programs.  Panda3D is open-source and free for any purpose,
+including commercial ventures, thanks to its
+<a href="https://www.panda3d.org/license.php">liberal license</a>.  To learn more about
+Panda3D's capabilities, visit the <a href="https://www.panda3d.org/gallery.php">gallery</a>
+and the <a href="https://www.panda3d.org/features.php">feature list</a>.  To learn how to
+use Panda3D, check the <a href="https://www.panda3d.org/documentation.php">documentation</a>
+resources. If you get stuck, ask for help from our active
+<a href="https://www.panda3d.org/community.php">community</a>.</p>
+
+<p>Panda3D is licensed under the Modified BSD License.  See the LICENSE file for
+more details.</p>
+
+<h1>
+<a id="building-panda3d" class="anchor" href="#building-panda3d" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building Panda3D</h1>
+
+<h2>
+<a id="windows" class="anchor" href="#windows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows</h2>
+
+<p>We currently build using the Microsoft Visual C++ 2010 compiler.  You do not
+need Microsoft Visual Studio to build Panda3D, though - the relevant compilers
+are included as part of the Windows 7.1 SDK.</p>
+
+<p>You will also need to have the third-party dependency libraries available for
+the build scripts to use.  These are available from here:
+<a href="https://www.panda3d.org/forums/viewtopic.php?f=9&amp;t=16346">https://www.panda3d.org/forums/viewtopic.php?f=9&amp;t=16346</a></p>
+
+<p>After acquiring these dependencies, you may simply build Panda3D from the
+command prompt using the following command:</p>
+
+<div class="highlight highlight-bash"><pre>makepanda<span class="pl-cce">\m</span>akepanda.bat --everything --installer</pre></div>
+
+<p>When the build succeeds, it will produce an .exe file that you can use to
+install Panda3D on your system.</p>
+
+<h2>
+<a id="linux" class="anchor" href="#linux" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linux</h2>
+
+<p>Building Panda3D on Linux is easy.  All you need is to invoke the makepanda
+script using the version of Python that you want Panda3D to be built against.</p>
+
+<p>Run makepanda.py with the --help option to see which options are available.
+Usually, you will want to specify the --everything option (which builds with
+support for all features for which it detects the prerequisite dependencies)
+and the --installer option (which produces an installable .deb or .rpm file
+for you to install, depending on your distribution).</p>
+
+<p>The following command illustrates how to build Panda3D with some common
+options:</p>
+
+<div class="highlight highlight-bash"><pre>python2.7 makepanda/makepanda.py --everything --installer --no-egl --no-gles --no-gles2</pre></div>
+
+<p>You will probably see some warnings saying that it's unable to find several
+dependency packages.  You should determine which ones you want to include in
+your build and install the respective development packages.  You may visit
+<a href="https://www.panda3d.org/manual/index.php/Dependencies">this manual page</a>
+for an overview of the various dependencies.</p>
+
+<p>If you are on Ubuntu, this command should cover the most frequently
+used third-party packages:</p>
+
+<div class="highlight highlight-bash"><pre>sudo apt-get install python-dev libpng-dev zlib1g-dev libssl-dev libx11-dev libgl1-mesa-dev libxrandr-dev libxxf86dga-dev libxcursor-dev bison flex libfreetype6-dev libvorbis-dev libjpeg-dev libeigen3-dev libopenal-dev libode-dev libbullet-dev nvidia-cg-toolkit</pre></div>
+
+<p>Once Panda3D has built, you can either install the .deb or .rpm package that
+it produced (if relevant to your platform, and you added --installer).  On
+other systems, you will need to use the installpanda script to install it onto
+your system.  Careful: it is not easy to uninstall Panda3D in this way!</p>
+
+<div class="highlight highlight-bash"><pre>python2.7 makepanda/installpanda.py --prefix=/usr/local</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Panda3d maintained by <a href="https://github.com/kbtomo">kbtomo</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
